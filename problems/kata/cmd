@@ -1,0 +1,4 @@
+file ./ropasaurusrex
+target remote localhost:1234
+c
+b *0x8048448
