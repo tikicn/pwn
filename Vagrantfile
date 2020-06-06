@@ -32,5 +32,6 @@ Vagrant.configure("2") do |config|
 	pip install --upgrade --editable ./pwntools
 	gem install one_gadget
 	echo "source ~/peda/peda.py" >> ~/.gdbinit
+	cp /home/vagrant/pwn/tmux.conf /home/vagrant/.tmux.conf 
   SHELL
 end
