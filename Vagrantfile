@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
 	dpkg --add-architecture i386
 	apt -y update
 	apt -y upgrade
-	apt install -y xclip socat gdb gdb-multiarch libc6-dbg libc6-dbg:i386 git binutils gcc-multilib g++-multilib curl wget make libssl-dev build-essential ruby ruby-dev radare2 netcat nasm ltrace strace vim
+	apt install -y tmux xclip socat gdb gdb-multiarch libc6-dbg libc6-dbg:i386 git binutils gcc-multilib g++-multilib curl wget make libssl-dev build-essential ruby ruby-dev radare2 netcat nasm ltrace strace vim
 	git clone https://github.com/longld/peda /home/vagrant/peda 
 	git clone https://github.com/scwuaptx/Pwngdb.git /home/vagrant/Pwngdb 
 	cp /home/vagrant/Pwngdb/.gdbinit /home/vagrant/ 
