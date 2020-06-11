@@ -14,14 +14,17 @@ if len(sys.argv) > 1 and sys.argv[1] == "r":
 else:
     conn = process(FILE_NAME)
 
+
+# buflen=0
 # elf=ELF(FILE_NAME)
-# addr_main=elf.symbols["main"]
-# addr_bss=elf.bss()
+# bss=elf.bss()
+# printf_plt=elf.plt['printf']
+# printf_got=elf.got['printf']
+# main_addr=elf.symbols['main']
 
 
 def main():
 
-    buflen = 0
     payload = b"A"*buflen
     payload += p32(0x12345678)
     conn.sendlineafter(">", payload)
