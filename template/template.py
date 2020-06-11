@@ -17,13 +17,14 @@ else:
 # elf=ELF(FILE_NAME)
 # addr_main=elf.symbols["main"]
 # addr_bss=elf.bss()
-# addr_dynsym=elf.get_section_by_name(".dynsym").header["sh_addr"]
-#
-# libc=ELF("./")
-# libc_sh=nex(libc.search(b"/bin/sh"))
 
 
 def main():
+
+    buflen = 0
+    payload = b"A"*buflen
+    payload += p32(0x12345678)
+    conn.sendlineafter(">", payload)
     conn.interactive()
 
 
